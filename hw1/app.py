@@ -61,14 +61,6 @@ if uploaded_csv is not None:
         st.subheader('Валидация предсказаний')
         st.write(validation_df)
 
-    # if uploaded_csv_targets is not None:
-    #     targets = pd.read_csv(uploaded_csv_targets, index_col=0)
-    #     r2_score_metric = pd.DataFrame({'R2 score': r2_score(targets, df_preds)})
-        
-    #     validation_df = pd.concat([targets, df_preds, r2_score_metric, data])
-    #     st.subheader('Валидация предсказаний')
-    #     st.write(df_final)
-
 st.header('3) Визуализация весов модели')
 
 weights = model.coef_
